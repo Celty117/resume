@@ -3,170 +3,302 @@
 <head>
   <meta charset="utf-8">
   <title>JS Bin</title>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_389465_o0z9ozt6oft21emi.css">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:boeder-box;
+    }
+    a{
+      text-decoration:none;
+    }
+    ul{
+      list-style:none;
+    }
+    h4{
+      font-size:20px;
+    }
+    
+    .clearfix:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+    nav>a{
+      float:left;
+    }
+    .nav{
+      float:right;
+    }
+    .nav>li{
+      float:left;
+    }
+    nav,section,.title{
+      width:1000px;
+      margin:0 auto;
+    }
+    header{
+      position:relative;
+      height:800px;
+      background:#191a1e url(http://img3.imgtn.bdimg.com/it/u=4167040990,1137871497&fm=214&gp=0.jpg) center center no-repeat;
+    }
+    .title{
+      color:#ffffff;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      text-align:center;
+    }
+    .nav a{
+      color:#ffffff;
+      margin:15px 10px;
+      display:block;
+    }
+    .nav a:hover{
+      color:yellow;
+    }
+    .logo{
+      display:block;
+      margin:15px;
+      font-size:25px;
+      color:#236257;
+    }
+    .title>h1{
+      font-size:30px;
+      margin:20px;
+    }
+    .title>h3{
+      font-size:50px;
+    }
+    .button{
+      color:#ffffff;
+      font-size:20px;
+      margin:60px;
+      padding:10px 10px;
+      background:#f7ba3e;
+      display:inline-block;
+      border-radius:5px;
+    }
+    .button:hover{
+      background-color:#e8cb4f;
+    }
+    
+    
+    
+    section{
+      margin-top:70px;
+      text-align:center;
+    }
+    h2{
+      font-size:40px;
+    }
+    section>p{
+      margin-top:30px;
+    }
+    .service>ul>li{
+      margin-top:40px;
+      float:left;
+      width:33.3%;
+    }
+    section>ul .iconfont{
+      font-size:40px;
+    }
+    
+    
+    .portfolio ul li{
+      float:left;
+      width:calc(33.3% - 20px);
+      background:#ffffff;
+      margin:20px 10px;
+    }
+    .portfolio ul a{
+      height:200px;
+      display:block;
+    }
+    .portfolio ul img{
+      height:100%;
+      width:100%;
+    }
+    .portfolio h4{
+      margin-top:15px;
+    }
+    .portfolio p{
+      font-size:15px;
+      margin-top:10px;
+    }
+    
+  </style>
+  
 </head>
 <body>
  <header>
-   <nav>
-     <span><a href="">Start Project</a></span>
-     <ul>
-       <li>SERVICES</li>
-       <li>PORTFOLIO</li>
-       <li>ABOUT</li>
-       <li>TEAM</li>
-       <li>CONTACT</li>
+   <nav class="clearfix">
+     <a class="logo" href="">Start Project</a>
+     <ul class="nav">
+       <li><a href="">SERVICES</a></li>
+       <li><a href="">PORTFOLIO</a></li>
+       <li><a href="">ABOUT</a></li>
+       <li><a href="">TEAM</a></li>
+       <li><a href="">CONTACT</a></li>
      </ul>
    </nav>
-   <h3>Welcome To Our Studio!</h3>
-   <h1>IT'S NICE TO MEET YOU</h1>
-   <a href="">TELL ME MORE</a>
-  </header>
- <section>
-   <h2>SERVICES</h2>
-   <p>Lorem ipsum dolor sit amet consectetur.</p>
-   <ul>
-     <li>
-       <span></span>
-       <h4>E-Commerce</h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-     </li>
-     <li>
-       <span></span>
-       <h4>Responsive Design</h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-     </li>
-     <li>
-       <span></span>
-       <h4>Web Security</h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-     </li>
-   </ul>
- </section>
- <section>
-   <h2>PORTFOLIO</h2>
-   <p>Lorem ipsum dolor sit amet consectetur.</p>
-   <ul>
-     <li>
-       <a href=""><img src="" alt=""></a>
-       <h4>Round Icons</h4>
-       <p>Graphic Design</p>
-     </li>
-     <li>
-       <a href=""><img src="" alt=""></a>
-       <h4>Startup Framework</h4>
-       <p>Website Design</p>
-     </li>
-     <li>
-       <a href=""><img src="" alt=""></a>
-       <h4>Treehouse</h4>
-       <p>Website Design</p>
-     </li>
-     <li>
-       <a href=""><img src="" alt=""></a>
-       <h4>Treehouse</h4>
-       <p>Website Design</p>
-     </li>
-     <li>
-       <a href=""><img src="" alt=""></a>
-       <h4>Treehouse</h4>
-       <p>Website Design</p>
-     </li>
-     <li>
-       <a href=""><img src="" alt=""></a>
-       <h4>Treehouse</h4>
-       <p>Website Design</p>
-     </li>
-   </ul>
- </section>
- <section>
-   <h2>ABOUT</h2>
-   <p>Lorem ipsum dolor sit amet consectetur.</p>
-   <ul>
-     <li>
-       <span><img src="" alt=""></span>
-       <h4>2009-2011</h4>
-       <h4>Our Humble Beginnings</h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-     </li>
-     <li>
-       <span><img src="" alt=""></span>
-       <h4>2009-2011</h4>
-       <h4>An Agency is Born</h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-     </li>
-     <li>
-       <span><img src="" alt=""></span>
-       <h4>2009-2011</h4>
-       <h4>An Agency is Born</h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-     </li>
-     <li>
-       <span><img src="" alt=""></span>
-       <h4>2009-2011</h4>
-       <h4>An Agency is Born</h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-     </li>
-     <li>
-       <span><img src="" alt=""></span>
-       <h4></h4>
-       <h4></h4>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-     </li>
-   </ul>
- </section>
- <section>
-   <h2>OUR AMAZING TEAM</h2>
-   <p>Lorem ipsum dolor sit amet consectetur.</p>
-   <ul>
-     <li>
-       <span></span>
-       <h4>Kay Garland</h4>
-       <p>Lead Designer</p>
-       <a href=""></a>
-       <a href=""></a>
-       <a href=""></a>
-     </li>
-     <li>
-       <span></span>
-       <h4>Kay Garland</h4>
-       <p>Lead Designer</p>
-       <a href=""></a>
-       <a href=""></a>
-       <a href=""></a>
-     </li>
-     <li>
-       <span></span>
-       <h4>Kay Garland</h4>
-       <p>Lead Designer</p>
-       <a href=""></a>
-       <a href=""></a>
-       <a href=""></a>
-     </li>
-   </ul>
-   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
- </section>
- <section>
-   <ul>
-     <li><img src="" alt=""></li>
-     <li><img src="" alt=""></li>
-     <li><img src="" alt=""></li>
-     <li><img src="" alt=""></li>
-   </ul>
- </section>
- <section>
-   <h2>CONTACT US</h2>
-   <p>Lorem ipsum dolor sit amet consectetur.</p>
-   <div>
-   <form action="" method="">
-     <div><input type="text"></div>
-     <div><input type="text"></div>
-     <div><input type="text"></div>
-     <div>
-       <textarea name="message" placeholder="your message"></textarea>
-     </div>
-     <div><input type="submit"></div>
-   </form>
+   <div class="title">
+     <h1>Welcome To Our Studio!</h1>
+     <h3>IT'S NICE TO MEET YOU</h3>
+     <a class="button" href="">TELL ME MORE</a>
    </div>
- </section>
+  </header>
+  <main>
+    <section class="service">
+      <h2>SERVICES</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+      <ul class="clearfix">
+        <li>
+         <span class="iconfont icon-diannao"></span>
+         <h4>E-Commerce</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+       </li>
+       <li>
+         <span class="iconfont icon-gouwuche"></span>
+         <h4>Responsive Design</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+       </li>
+       <li>
+         <span class="iconfont icon-mimasuo"></span>
+         <h4>Web Security</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+       </li>
+     </ul>
+   </section>
+   <section class="portfolio">
+     <h2>PORTFOLIO</h2>
+     <p>Lorem ipsum dolor sit amet consectetur.</p>
+     <ul class="clearfix">
+       <li>
+         <a href=""><img src="http://i2.sinaimg.cn/gm/2014/1107/U8098P115DT20141107093350.jpg" alt=""></a>
+         <h4>Round Icons</h4>
+         <p>Graphic Design</p>
+       </li>
+       <li>
+         <a href=""><img src="http://images.17173.com/2015/news/2015/05/15/lzy0515ws03s.jpg" alt=""></a>
+         <h4>Startup Framework</h4>
+         <p>Website Design</p>
+       </li>
+       <li>
+         <a href=""><img src="http://img0.imgtn.bdimg.com/it/u=700712137,95965337&fm=26&gp=0.jpg" alt=""></a>
+         <h4>Treehouse</h4>
+         <p>Website Design</p>
+       </li>
+       <li>
+         <a href=""><img src="http://img0.imgtn.bdimg.com/it/u=2603403633,1492666797&fm=26&gp=0.jpg" alt=""></a>
+         <h4>Treehouse</h4>
+         <p>Website Design</p>
+       </li>
+       <li>
+         <a href=""><img src="http://img0.imgtn.bdimg.com/it/u=1298650209,1823281173&fm=26&gp=0.jpg" alt=""></a>
+         <h4>Treehouse</h4>
+         <p>Website Design</p>
+       </li>
+       <li>
+         <a href=""><img src="http://img5.imgtn.bdimg.com/it/u=3331853969,2454622354&fm=26&gp=0.jpg" alt=""></a>
+         <h4>Treehouse</h4>
+         <p>Website Design</p>
+       </li>
+     </ul>
+   </section>
+   <section>
+     <h2>ABOUT</h2>
+     <p>Lorem ipsum dolor sit amet consectetur.</p>
+     <ul>
+       <li>
+         <span><img src="" alt=""></span>
+         <h4>2009-2011</h4>
+         <h4>Our Humble Beginnings</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+       </li>
+       <li>
+         <span><img src="" alt=""></span>
+         <h4>2009-2011</h4>
+         <h4>An Agency is Born</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+       </li>
+       <li>
+         <span><img src="" alt=""></span>
+         <h4>2009-2011</h4>
+         <h4>An Agency is Born</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+       </li>
+       <li>
+         <span><img src="" alt=""></span>
+         <h4>2009-2011</h4>
+         <h4>An Agency is Born</h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+       </li>
+       <li>
+         <span><img src="" alt=""></span>
+         <h4></h4>
+         <h4></h4>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+       </li>
+     </ul>
+   </section>
+   <section>
+     <h2>OUR AMAZING TEAM</h2>
+     <p>Lorem ipsum dolor sit amet consectetur.</p>
+     <ul>
+       <li>
+         <span></span>
+         <h4>Kay Garland</h4>
+         <p>Lead Designer</p>
+         <a href=""></a>
+         <a href=""></a>
+         <a href=""></a>
+       </li>
+       <li>
+         <span></span>
+         <h4>Kay Garland</h4>
+         <p>Lead Designer</p>
+         <a href=""></a>
+         <a href=""></a>
+         <a href=""></a>
+       </li>
+       <li>
+         <span></span>
+         <h4>Kay Garland</h4>
+         <p>Lead Designer</p>
+         <a href=""></a>
+         <a href=""></a>
+         <a href=""></a>
+       </li>
+     </ul>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+   </section>
+   <section>
+     <ul>
+       <li><img src="" alt=""></li>
+       <li><img src="" alt=""></li>
+       <li><img src="" alt=""></li>
+       <li><img src="" alt=""></li>
+     </ul>
+   </section>
+   <section>
+     <h2>CONTACT US</h2>
+     <p>Lorem ipsum dolor sit amet consectetur.</p>
+     <div>
+     <form action="" method="">
+       <div><input type="text"></div>
+       <div><input type="text"></div>
+       <div><input type="text"></div>
+       <div>
+         <textarea name="message" placeholder="your message"></textarea>
+       </div>
+       <div><input type="submit"></div>
+     </form>
+     </div>
+   </section>
+ </main>
  <footer>
    <ul>
      <li>Copyright © Your Website 2014</li>
