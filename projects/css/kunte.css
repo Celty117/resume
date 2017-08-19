@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:boeder-box;
+}
+body{
+    min-width:1000px;
+}
+a{
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+}
+h4{
+    font-size:20px;
+}
+
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+nav>a{
+    float:left;
+}
+.nav{
+    float:right;
+}
+.nav>li{
+    float:left;
+}
+nav,section,.title{
+    width:1200px;
+    margin:0 auto;
+}
+header{
+    position:relative;
+    height:1000px;
+    background:#191a1e url(http://img1.gamersky.com/upimg/pic/2017/04/13/201704131143034716.jpg) center center no-repeat;
+}
+.title{
+    color:#ffffff;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+.nav a{
+    color:#ffffff;
+    margin:15px 10px;
+    display:block;
+}
+.nav a:hover{
+    color:yellow;
+}
+.logo{
+    display:block;
+    margin:15px;
+    font-size:25px;
+    color:#236257;
+}
+.title>h1{
+    font-size:30px;
+    margin:20px;
+}
+.title>h3{
+    font-size:50px;
+}
+.button{
+    color:#ffffff;
+    font-size:20px;
+    margin:60px;
+    padding:10px 10px;
+    background:#f7ba3e;
+    display:inline-block;
+    border-radius:5px;
+}
+.button:hover{
+    background-color:#e8cb4f;
+}
+
+
+
+section{
+    margin-top:70px;
+    text-align:center;
+}
+h2{
+    font-size:40px;
+}
+section>p{
+    margin-top:30px;
+}
+.service>ul>li{
+    margin-top:40px;
+    float:left;
+    width:33.3%;
+}
+section ul .iconfont{
+    font-size:40px;
+}
+
+
+.portfolio ul li{
+    float:left;
+    width:calc(33.3% - 20px);
+    background:#ffffff;
+    margin:20px 10px;
+}
+.portfolio ul a{
+    height:200px;
+    display:block;
+}
+.portfolio ul img{
+    height:100%;
+    width:100%;
+}
+.portfolio h4{
+    margin-top:15px;
+}
+.portfolio p{
+    font-size:15px;
+    margin-top:10px;
+}
+
+
+section .timeline li {
+    margin-top: 150px;
+    position: relative;
+}
+section .timeline > li:nth-child(odd) {
+    padding-right: calc(50% - 80px);
+    text-align: right;
+}
+section .timeline > li:nth-child(odd) img {
+    float: right;
+}
+section .timeline > li:nth-child(odd) dl {
+    margin-right:200px;
+}
+section .timeline > li:nth-child(even) {
+    padding-left: calc(50% - 80px);
+    text-align: left;
+}
+section .timeline > li:nth-child(even) img {
+    float: left;
+}
+section .timeline > li:nth-child(even) dl {
+    margin-left: 200px;
+}
+section .timeline img,
+section .timeline .next {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid lightslategray;
+}
+section .timeline .next {
+    display: inline-block;
+    text-align: center;
+    padding: 8px;
+    font-size: 35px;
+    background: #666666;
+    color: #ffffff;
+}
+section .timeline > li::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+section .timeline dt {
+    font-size: 20px;
+    font-weight: bold;
+}
+section .timeline dd:nth-child(2) {
+    font-size: 18px;
+    font-weight: bold;
+}
+section .timeline > li::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 156px;
+    display: inline-block;
+    height: 156px;
+    width: 3px;
+    background: lightslategray;
+}
+section .timeline > li:last-child::before {
+    height: 0px;
+}
