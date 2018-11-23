@@ -1,3 +1,6 @@
+body{
+  background: black;
+}
 .clearfix::after{
   content:  '';
   display: block;
@@ -5,5 +8,15 @@
 }
 
 .topNavBar>nav>ul{
-  list-style: none; margin: 0; padding: 0; border: 1px solid red;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+.topNavBar>nav>ul>li{
+  float: left;
+}
+.topNavBar>nav>ul>li>a{
+  font-size: 12px;
+  color: #b7b7b7;
+
 }
