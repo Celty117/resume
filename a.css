@@ -14,7 +14,11 @@ a{
 }
 
 .topNavBar{
-  padding: 20px 16px 20px 16px;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .topNavBar>nav{
   padding-top: 7px;
@@ -55,4 +59,9 @@ a{
 }
 .topNavBar .logo .card{
   color: #9a9da2;
+}
+.banner{
+  background-image:url(./img/cat1.jpg);
+  height: 515px;
+  border: 1px solid red;
 }
