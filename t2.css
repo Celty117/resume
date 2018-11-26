@@ -1,0 +1,157 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #efefef;
+}
+a{
+  text-decoration: none;
+}
+hr{
+  height: 0px;
+  border: none;
+  border-top: 1px solid #dedede;
+}
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.topNavBar{
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+}
+.topNavBar>.topNavBar-inner{
+  padding-left: 16px;
+  padding-right: 16px;;
+}
+.topNavBar .logo{
+  float: left;
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+.topNavBar .logo .rs{
+  font-size: 24px;
+  color: #E6686A;
+  padding-right: 6px;
+}
+.topNavBar .logo .card{
+  font-size: 24px;
+  color: #9A9DA2;
+}
+.topNavBar nav{
+  float: right;
+  padding-top: 7px;
+}
+.topNavBar nav ul{
+  list-style: none;
+}
+.topNavBar nav>ul>li{
+  float: left;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+.topNavBar nav li>a{
+  font-size: 13px;
+  font-weight: bold;
+  color: #B7B7B7;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+  display: block;
+}
+.topNavBar nav li>a:hover{
+  border-bottom-color: #E06567;
+}
+.banner{
+  background-image: url(./img/dragon.jpg);
+  height: 515px;
+  background-size: cover;
+  background-position: center;
+}
+.banner .mask{
+  height: 515px;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.userCard{
+  background-color: #ffffff;
+  width: 942px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.userCard>.pictureAndtext{
+  padding: 51px;
+}
+.userCard .picture{
+  float: left;
+}
+.userCard .text{
+  float: left;
+  margin-left: 67px;
+  width: 470px;
+}
+.userCard .text .welcome{
+  color: #ffffff;
+  background: #E6686A;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 16px;
+  line-height: 22px;
+  position: relative;
+}
+.userCard .text .welcome>.triangle{
+  display: block;
+  border: 10px solid transparent;
+  width: 0px;
+  height: 0px;
+  border-top-width: 0px;
+  border-left-color: #E6686A;
+  position: absolute;
+  left: 4px;
+  top: 100%;
+}
+.userCard .text h1{
+  margin-top: 20px;
+}
+.userCard .text hr{
+  margin: 20px 0px;
+}
+.userCard .text dl dt,
+.userCard .text dl dd{
+  float: left;
+}
+.userCard .text dl dt{
+  font-weight: bold;
+  width: 30%;
+  margin: 5px 0px;
+}
+.userCard .text dl dd{
+  color: #9da0a7;
+  width: 70%;
+  margin: 5px 0px;
+}
+.userCard .media{
+  background: #e6686a;
+  text-align: center;
+}
+.userCard .media a{
+  display: inline-block;
+  width: 40px;
+  padding: 5px 0px;
+  margin: 16px;
+  border-radius: 50%;
+  line-height: 30px;
+}
+.userCard .media a:hover{
+  background: #cf5d5f;
+}
+.userCard svg{
+  width: 30px;
+  height: 30px;
+  fill: white;
+  vertical-align: top;
+}
