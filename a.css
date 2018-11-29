@@ -244,6 +244,7 @@ section.skills .progressBar>.progress{
 
 section.portfolio{
   text-align: center;
+  margin-bottom: 100px;
 }
 section.portfolio>nav{
   text-align: center;
@@ -268,7 +269,7 @@ section.portfolio>nav .bar{
   height: 5px;
   background: white;
   margin-top: 5px;
-  margin-bottom: 100px;
+  margin-bottom: 28px;
   border-radius: 3px;
 }
 section.portfolio>nav .bar-inner{
@@ -288,4 +289,12 @@ section.portfolio>nav .bar.state-2 .bar-inner{
 section.portfolio>nav .bar.state-3 .bar-inner{
   margin-left: 146px;
   width: 91px;
+}
+section.portfolio .works{
+  position: relative;
+  height: 597px;
+}
+section.portfolio .works>.big,
+section.portfolio .works>.small{
+  position: absolute;
 }
