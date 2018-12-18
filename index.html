@@ -26,14 +26,17 @@
       justify-content: center;
       align-items: center;
     }
+
     .enter.active {
       display: flex;
     }
+
     .loading {
       width: 200px;
       height: 200px;
       position: relative;
     }
+
     .loading::before,
     .loading::after {
       content: '';
@@ -49,15 +52,18 @@
       margin: auto;
       animation: s 1.5s linear infinite;
     }
+
     .loading::after {
       animation-delay: 0.75s;
     }
+
     @keyframes s {
       0% {
         width: 0px;
         height: 0px;
         opacity: 1;
       }
+
       100% {
         width: 100px;
         height: 100px;
@@ -80,8 +86,20 @@
         <ul class="clearfix">
           <li><a href="#">关于</a></li>
           <li><a href="#">技能</a></li>
-          <li><a href="#">作品</a></li>
-          <li><a href="#">博客</a></li>
+          <li><a class="menuTigger" href="#">作品</a>
+            <ul class="submenu">
+              <li>作品1</li>
+              <li>作品2</li>
+              <li>作品3</li>
+            </ul>
+          </li>
+          <li><a class="menuTigger" href="#">博客</a>
+            <ul class="submenu">
+              <li>博客1</li>
+              <li>博客2</li>
+              <li>博客3</li>
+            </ul>
+          </li>
           <li><a href="#">日历</a></li>
           <li><a href="#">联系方式</a></li>
           <li><a href="#">其他</a></li>
@@ -242,15 +260,28 @@
     </div>
   </section>
   <script>
-    setTimeout(function(){
+    setTimeout(function () {
       enter.classList.remove('active')
-    },2000)
+    }, 2000)
 
-    window.onscroll = function(){
-      if(window.scrollY>0){
+    window.onscroll = function () {
+      if (window.scrollY > 0) {
         topNavBar.classList.add('sticky')
-      }else{
+      } else {
         topNavBar.classList.remove('sticky')
+      }
+    }
+    let aTags = document.getElementsByClassName('menuTigger')
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onmouseenter = function (x) {
+        let a = x.currentTarget
+        let brother = a.nextSibling
+        while (brother.nodeType === 3) {
+          brother === brother.nextSibling
+        }
+      }
+      aTags[i].onmouseleave = function () {
+
       }
     }
   </script>
