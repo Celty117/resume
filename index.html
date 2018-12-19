@@ -84,10 +84,14 @@
       </a>
       <nav class="menu" style="float: right;">
         <ul class="clearfix">
-          <li><a href="#">关于</a></li>
-          <li><a href="#">技能</a></li>
           <li>
-            <a href="#">作品</a>
+            <a href="#siteAbout">关于</a>
+          </li>
+          <li>
+            <a href="#siteSkills">技能</a>
+          </li>
+          <li>
+            <a href="#siteWorks">作品</a>
             <ul class="submenu">
               <li>作品1</li>
               <li>作品2</li>
@@ -102,9 +106,15 @@
               <li>博客3</li>
             </ul>
           </li>
-          <li><a href="#">日历</a></li>
-          <li><a href="#">联系方式</a></li>
-          <li><a href="#">其他</a></li>
+          <li>
+            <a href="#">日历</a>
+          </li>
+          <li>
+            <a href="#">联系方式</a>
+          </li>
+          <li>
+            <a href="#">其他</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -113,7 +123,7 @@
     <div class="mask"></div>
   </div>
   <main>
-    <div class="userCard">
+    <div id="siteAbout" class="userCard">
       <div class="pictureAndtext clearfix">
         <div class="picture">
           <img src="./img/avatar.jpg" alt="头像">
@@ -184,7 +194,7 @@
       技能：前端开发
     </p>
   </main>
-  <section class="skills">
+  <section id="siteSkills" class="skills">
     <h2>专业技能</h2>
     <ol class="clearfix">
       <li>
@@ -225,7 +235,7 @@
       </li>
     </ol>
   </section>
-  <section class="portfolio">
+  <section id="siteWorks" class="portfolio">
     <h2>作品集</h2>
     <nav>
       <ol class="clearfix">
@@ -280,6 +290,18 @@
       }
       liTags[i].onmouseleave = function (x) {
         x.currentTarget.classList.remove('active')
+      }
+    }
+
+    let aTags = document.querySelectorAll('nav.menu>ul>li>a')
+    for(let i=0;i<aTags.length;i++){
+      aTags[i].onclick = function(x){
+        x.preventDefault()  // 阻止默认动作
+        let a = x.currentTarget   // 获取到用户点击的a标签
+        let href = a.getAttribute('href')   // 获取到a标签上面的href
+        let element = document.querySelector(href)  // 根据href得到元素element
+        let top = element.offsetTop   // 得到距顶端的距离
+        window.scrollTo(0,top-70)   // 让window滑动到x方向不变，y方向top-80
       }
     }
   </script>
