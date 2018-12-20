@@ -271,6 +271,7 @@
       </div>
     </div>
   </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
   <script>
     setTimeout(function () {
       enter.classList.remove('active')
@@ -294,6 +295,13 @@
     }
 
     let aTags = document.querySelectorAll('nav.menu>ul>li>a')
+
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+
     for (let i = 0; i < aTags.length; i++) {
       aTags[i].onclick = function (x) {
         x.preventDefault()  // 阻止默认动作
@@ -302,20 +310,19 @@
         let element = document.querySelector(href)  // 根据href得到元素element
         let top = element.offsetTop   // 得到距顶端的距离
         // let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop  等于上面四句话
-        let n = 25
-        let duration = 500 / n
         let currentTop = window.scrollY
         let targetTop = top - 70
-        let distance = (targetTop - currentTop) / n
-        let i = 0
-        let id = setInterval(() => {
-          if (i === n) {
-            window.clearInterval(id)
-            return
-          }
-          i = i + 1
-          window.scrollTo(0, currentTop + distance * i)
-        }, duration)
+        let s = targetTop - currentTop
+        var coords = { y: currentTop };
+        var t = Math.abs(s / 100) * 300
+        if (t > 500) { t = 500 }
+        var tween = new TWEEN.Tween(coords)
+          .to({ y: targetTop }, t)
+          .easing(TWEEN.Easing.Quadratic.InOut)
+          .onUpdate(function () {
+            window.scrollTo(0, coords.y)
+          })
+          .start();
       }
     }
   </script>
