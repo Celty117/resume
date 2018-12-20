@@ -294,14 +294,28 @@
     }
 
     let aTags = document.querySelectorAll('nav.menu>ul>li>a')
-    for(let i=0;i<aTags.length;i++){
-      aTags[i].onclick = function(x){
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onclick = function (x) {
         x.preventDefault()  // 阻止默认动作
         let a = x.currentTarget   // 获取到用户点击的a标签
         let href = a.getAttribute('href')   // 获取到a标签上面的href
         let element = document.querySelector(href)  // 根据href得到元素element
         let top = element.offsetTop   // 得到距顶端的距离
-        window.scrollTo(0,top-70)   // 让window滑动到x方向不变，y方向top-80
+        // let top = document.querySelector(x.currentTarget.getAttribute('href')).offsetTop  等于上面四句话
+        let n = 25
+        let duration = 500 / n
+        let currentTop = window.scrollY
+        let targetTop = top - 70
+        let distance = (targetTop - currentTop) / n
+        let i = 0
+        let id = setInterval(() => {
+          if (i === n) {
+            window.clearInterval(id)
+            return
+          }
+          i = i + 1
+          window.scrollTo(0, currentTop + distance * i)
+        }, duration)
       }
     }
   </script>
