@@ -27,6 +27,13 @@ h1,h2,h3,h4,h5,h6{
   clear: both;
 }
 
+[data-x].offset{
+  transform: translateY(100px);
+}
+[data-x]{
+  transform: translateY(0);
+  transition: all 0.5s;
+}
 
 .topNavBar{
   padding: 20px 0;
@@ -72,7 +79,8 @@ h1,h2,h3,h4,h5,h6{
   display: block;
   position: relative;
 }
-.topNavBar nav>ul>li.active>a::after{
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highlight>a::after{
   content: '';
   display: block;
   position: absolute;
@@ -287,12 +295,18 @@ section.skills .progressBar{
   background: #fae1e1;
   border-radius: 3px;
   margin: 4px 0px 40px;
+  overflow: hidden;
 }
 section.skills .progressBar>.progress{
   background: #e6686a;
   height: 100%;
   width: 75%;
   border-radius: 3px;
+  transform: translateX(0);
+  transition: all 1s;
+}
+section.skills.offset .progress{
+  transform: translateX(-100%)
 }
 
 section.portfolio{

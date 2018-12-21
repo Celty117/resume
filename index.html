@@ -14,7 +14,7 @@
       overflow: hidden;
     }
 
-    .enter {
+    /**.enter {
       display: none;
       position: fixed;
       top: 0;
@@ -69,7 +69,7 @@
         height: 150px;
         opacity: 0;
       }
-    }
+    }**/
   </style>
 </head>
 
@@ -273,17 +273,26 @@
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
   <script>
-    setTimeout(function () {
+    /**setTimeout(function () {
       enter.classList.remove('active')
-    }, 2000)
+    }, 2000)**/
 
+    let specialTags = document.querySelectorAll('[data-x]')
+    for (let i = 0; i < specialTags.length; i++) {
+      specialTags[i].classList.add('offset')
+    }
+
+    findClosest()
     window.onscroll = function (x) {
       if (window.scrollY > 0) {
         topNavBar.classList.add('sticky')
       } else {
         topNavBar.classList.remove('sticky')
       }
+      findClosest()
+    }
 
+    function findClosest() {
       let specialTags = document.querySelectorAll('[data-x]')
       let minIndex = 0
       for (let i = 1; i < specialTags.length; i++) {
@@ -291,18 +300,16 @@
           minIndex = i
         }
       }
-      for (let i = 0; i < specialTags.length; i++) {
-        specialTags[i].classList.remove('active') // 消除所有的specialTags里的'active'
-      }
-      specialTags[minIndex].classList.add('active') // 最后给该加的那个加上'active'
+
+      specialTags[minIndex].classList.remove('offset')
       let id = specialTags[minIndex].id
       let a = document.querySelector('a[href="#' + id + '"]')
       let li = a.parentNode
       let brothersAndMe = li.parentNode.children
       for (let i = 0; i < brothersAndMe.length; i++) {
-        brothersAndMe[i].classList.remove('active')
+        brothersAndMe[i].classList.remove('highlight')
       }
-      li.classList.add('active')
+      li.classList.add('highlight')
     }
 
     let liTags = document.querySelectorAll('nav.menu>ul>li')
