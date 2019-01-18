@@ -21,6 +21,13 @@ ul,ol{
 h1,h2,h3,h4,h5,h6{
   font-weight: normal;
 }
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
 .clearfix::after{
   content:  '';
   display: block;
@@ -312,56 +319,4 @@ section.skills.offset .progress{
 section.portfolio{
   text-align: center;
   margin-bottom: 100px;
-}
-section.portfolio>nav{
-  text-align: center;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 32px;
-}
-section.portfolio>nav>ol{
-  margin: 0px auto;
-  display: inline-block;
-  vertical-align: top;
-}
-section.portfolio>nav>ol>li{
-  float: left;
-  margin-left: 40px;
-  cursor: pointer;
-}
-section.portfolio>nav>ol>li:first-child{
-  margin-left: 0px;
-}
-section.portfolio>nav .bar{
-  height: 5px;
-  background: white;
-  margin-top: 5px;
-  margin-bottom: 28px;
-  border-radius: 3px;
-}
-section.portfolio>nav .bar-inner{
-  height: 100%;
-  background: #e6686a;
-  border-radius: 3px;
-  transition: all 0.3s;
-}
-section.portfolio>nav .bar.state-1 .bar-inner{
-  margin-left: 0px;
-  width: 50px;
-}
-section.portfolio>nav .bar.state-2 .bar-inner{
-  margin-left: 65px;
-  width: 50px;
-}
-section.portfolio>nav .bar.state-3 .bar-inner{
-  margin-left: 146px;
-  width: 91px;
-}
-section.portfolio .works{
-  position: relative;
-  height: 597px;
-}
-section.portfolio .works>.big,
-section.portfolio .works>.small{
-  position: absolute;
 }
